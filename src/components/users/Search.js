@@ -17,6 +17,9 @@ const Search = () => {
       setText("");
     }
   };
+
+  const onChange = e => setText(e.target.value);
+
   return (
     <div>
       <form onSubmit={onSubmit} className="form">
@@ -25,6 +28,7 @@ const Search = () => {
           name="text"
           value={text}
           placeholder="Search Users..."
+          onChange={onChange}
         />
         <input
           type="submit"
